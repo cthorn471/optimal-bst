@@ -24,7 +24,7 @@ class OptimalBST:
                         self.root[(i, j)] = r
         return e
 
-    def construct_optimal_bst(self, i, j):
+    def construct_optimal_bst(self):
         k = self.root[(1, len(self.p))]
         print "k[%d] is the root" % k
         l, r = [(1, k - 1,)], [(k + 1, len(self.p),)]
@@ -59,5 +59,5 @@ if __name__ == "__main__":
     args = parser.parse_args()
     bst = OptimalBST(args.p, args.q)
     bst.optimal_bst(len(args.p))
-    bst.construct_optimal_bst(1, len(bst.p))
+    bst.construct_optimal_bst()
 
